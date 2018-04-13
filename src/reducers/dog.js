@@ -14,7 +14,7 @@ const initialState = {
   error:null,
 }
 
-export default function dashboardReducer(state = initialState, action){
+export default function dogReducer(state = initialState, action){
   switch (action.type) {
     case FETCH_DOG_SUCCESS:
       return null;

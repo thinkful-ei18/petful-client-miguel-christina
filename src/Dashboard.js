@@ -13,21 +13,19 @@ class Dashboard extends Component {
   }
 
   render() {
+    console.log(this.props,'props');
     return (
       <div className='pet-page'>
-        <Pet catToAdopt={this.props.catToAdopt} />
-        <Pet dogToAdopt={this.props.dogToAdopt} />
+        <Pet pet={this.props.catToAdopt} />
+        <Pet pet={this.props.dogToAdopt} />
       </div>
     );
   }
 }
 
 export const mapStateToProps = (state, props) => ({
-  catToAdopt: state.cat,
-  dogToAdopt: state.dog
+  catToAdopt: state.cat.currentCat,
+  dogToAdopt: state.dog.currentDog
 })
 
 export default connect(mapStateToProps)(Dashboard);
-
-
-

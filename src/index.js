@@ -12,9 +12,5 @@ ReactDOM.render(
     <Dashboard />
   </Provider>
 
-<<<<<<< HEAD
 , document.getElementById('root'));
-=======
-  , document.getElementById('root'));
->>>>>>> f1b631dcc1fe63f77f07601b4c89678a01eb0a92
 registerServiceWorker();

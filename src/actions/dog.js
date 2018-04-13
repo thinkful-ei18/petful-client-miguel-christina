@@ -1,4 +1,4 @@
-import {API_BASE_URL} from '..config.js'
+import {API_BASE_URL} from '../config.js'
 
 export const FETCH_DOG_REQUEST = 'FETCH_DOG_REQUEST'
 export const fetchDogRequest = () => ({
@@ -62,6 +62,13 @@ export const adoptDog = () => dispatch => {
       'Content-Type':'application/json'
     }
   })
-  .then((res) => dispatch(fetchDog()))
-  .then
+  .then((res) => {
+    return dispatch(fetchDog())
+  })
+  .then((res) => {
+    return dispatch(adoptDogSuccess(res))
+  })
+  .catch(err => {
+    dispatch(adoptDogError(err))
+  });
 }
