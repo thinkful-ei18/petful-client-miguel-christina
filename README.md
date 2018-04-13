@@ -22,9 +22,9 @@ http://heuristic-hodgkin-191e4f.netlify.com/
 Petful allows users to adopt the dog or cat that has been in the shelter the longest
 
 ## Tech Stack
-### React
-### Reduc
-### Redux-Thunk
+* React
+* Reduc
+* Redux-Thunk
 
 ## File Structure
 ```
