@@ -55,7 +55,7 @@ export const fetchCat = () => dispatch => {
 
 export const adoptCat = () => dispatch => {
   dispatch(adoptCatRequest());
-  return fetch(`${API_BASE_URL}/dogs`, {
+  return fetch(`${API_BASE_URL}/cat`, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json'
