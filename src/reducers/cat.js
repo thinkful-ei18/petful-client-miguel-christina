@@ -5,12 +5,6 @@ const initialState = {
   loading: false,
   error: null,
 }
-//
-// const initialState = {
-//   currentCat:null,
-//   loading:false,
-//   error:null,
-// }
 
 export default function catReducer(state = initialState, action) {
   switch (action.type) {

@@ -38,7 +38,7 @@ export const adoptCatError = () => ({
 
 export const fetchCat = () => dispatch => {
   dispatch(fetchCatRequest());
-  return fetch(`${API_BASE_URL}cat`, {
+  return fetch(`${API_BASE_URL}/cat`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json'
