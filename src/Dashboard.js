@@ -16,8 +16,8 @@ class Dashboard extends Component {
     console.log(this.props,'props');
     return (
       <div className='pet-page'>
-        <Pet pet={this.props.catToAdopt} />
-        <Pet pet={this.props.dogToAdopt} />
+        <Pet animal={this.props.catToAdopt} />
+      <Pet animal={this.props.dogToAdopt} />
       </div>
     );
   }

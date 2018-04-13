@@ -1,5 +1,5 @@
 import {FETCH_CAT_SUCCESS, FETCH_CAT_REQUEST, FETCH_CAT_ERROR} from '../actions/cat.js';
-
+//dummy initialState
 const initialState = {
   currentCat:{
     imageURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC_1cvH240d8UYYYJgY8d-Eh9BJZkr_EyqDAlkfjU05eikqXxdWg',
@@ -13,6 +13,12 @@ const initialState = {
   loading:false,
   error:null,
 }
+  //
+  // const initialState = {
+  //   currentCat:null,
+  //   loading:false,
+  //   error:null,
+  // }
 
 export default function catReducer(state = initialState, action){
   switch (action.type) {
