@@ -3,13 +3,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Pet from './components/Pet'
+import { fetchDog } from './actions/dog';
 
 
 class Dashboard extends Component {
 
   componentDidMount() {
     // fetchCat
-    // fetchDog
+    this.props.dispatch(fetchDog());
   }
 
   render() {
