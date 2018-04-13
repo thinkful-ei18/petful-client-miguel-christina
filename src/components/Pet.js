@@ -1,4 +1,5 @@
 import React from 'react';
+import '../pet.css'
 
 export default function Pet(props) {
 
@@ -10,15 +11,15 @@ export default function Pet(props) {
       </header>
       <main>
         <dl>
-          <dt>Name</dt>
+          <dt>Name:</dt>
           <dd>{props.animal.name}</dd>
-          <dt>Sex</dt>
+          <dt>Sex:</dt>
           <dd>{props.animal.sex}</dd>
-          <dt>Age</dt>
+          <dt>Age:</dt>
           <dd>{props.animal.age}</dd>
-          <dt>Breed</dt>
+          <dt>Breed:</dt>
           <dd>{props.animal.breed}</dd>
-          <dt>Story</dt>
+          <dt>Story:</dt>
           <dd>{props.animal.story}</dd>
         </dl>
         <button onClick={() => props.handleAdopt()}>Adopt!</button>

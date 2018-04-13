@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Pet from './components/Pet'
 import { fetchDog, adoptDog } from './actions/dog';
 import { fetchCat, adoptCat } from './actions/cat';
+import './pet.css'
 
 
 class Dashboard extends Component {
