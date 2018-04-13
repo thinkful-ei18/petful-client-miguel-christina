@@ -4,6 +4,11 @@ import React from 'react';
 
 export default function Pet(props) {
 
+  const onAdoptPet = (e) => {
+    console.log(e);
+  }
+
+
   return (
     <div className="pet">
       <header className="pet-header">
@@ -23,7 +28,7 @@ export default function Pet(props) {
           <dt>Story</dt>
           <dd>{props.pet.story}</dd>
         </dl>
-        <button>Adopt!</button>
+        <button onClick={e => onAdoptPet()}>Adopt!</button>
       </main>
     </div>
 
