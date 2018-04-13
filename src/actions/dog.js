@@ -62,6 +62,13 @@ export const adoptDog = () => dispatch => {
       'Content-Type': 'application/json'
     }
   })
-    .then((res) => dispatch(fetchDog()))
-    .then
+  .then((res) => {
+    return dispatch(fetchDog())
+  })
+  .then((res) => {
+    return dispatch(adoptDogSuccess(res))
+  })
+  .catch(err => {
+    dispatch(adoptDogError(err))
+  });
 }

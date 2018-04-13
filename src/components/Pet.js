@@ -4,35 +4,29 @@ import React from 'react';
 
 export default function Pet(props) {
 
-  const onAdoptPet = (e) => {
-    console.log(e);
-  }
-
-
   return (
     <div className="pet">
       <header className="pet-header">
-        <h1 className="pet-name">{props.pet.name}</h1>
-        <img src={props.pet.imageURL} className="pet-photo" alt={props.pet.imageDescription} />
+        <h1 className="pet-name">{props.animal.name}</h1>
+        <img src={props.animal.imageURL} className="pet-photo" alt={props.animal.imageDescription} />
       </header>
       <main>
         <dl>
           <dt>Name</dt>
-          <dd>{props.pet.name}</dd>
+          <dd>{props.animal.name}</dd>
           <dt>Sex</dt>
-          <dd>{props.pet.sex}</dd>
+          <dd>{props.animal.sex}</dd>
           <dt>Age</dt>
-          <dd>{props.pet.age}</dd>
+          <dd>{props.animal.age}</dd>
           <dt>Breed</dt>
-          <dd>{props.pet.breed}</dd>
+          <dd>{props.animal.breed}</dd>
           <dt>Story</dt>
-          <dd>{props.pet.story}</dd>
+          <dd>{props.animal.story}</dd>
         </dl>
-        <button onClick={e => onAdoptPet()}>Adopt!</button>
+        <button onClick={() => props.handleAdopt()}>Adopt!</button>
       </main>
     </div>
 
   );
 
 }
-
