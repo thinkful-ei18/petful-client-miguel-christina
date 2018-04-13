@@ -1,27 +1,34 @@
+<<<<<<< HEAD
 import {FETCH_DOG_SUCCESS, FETCH_DOG_REQUEST, FETCH_DOG_ERROR} from '../actions/dog.js';
+=======
+import { FETCH_DOG_SUCCESS, FETCH_DOG_REQUEST, FETCH_DOG_ERROR } from '../actions/dog.js';
+
+>>>>>>> 40ec02a4a65454372546c157f5e9c1f34eb2a39d
 const initialState = {
   currentDog: null,
-  loading:false,
-  error:null
+  loading: false,
+  error: null
 }
 
-export default function dogReducer(state = initialState, action){
+
+
+export default function dogReducer(state = initialState, action) {
   switch (action.type) {
     case FETCH_DOG_REQUEST:
       return {
         ...state,
-        loading:true
+        loading: true
       };
     case FETCH_DOG_SUCCESS:
       return {
         ...state,
         currentDog: action.dog,
-        loading:false
+        loading: false
       }
     case FETCH_DOG_ERROR:
       return {
         ...state,
-        error:action.error
+        error: action.error
       };
 
 

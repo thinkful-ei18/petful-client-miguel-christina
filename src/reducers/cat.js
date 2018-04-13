@@ -1,29 +1,34 @@
-import {FETCH_CAT_SUCCESS, FETCH_CAT_REQUEST, FETCH_CAT_ERROR} from '../actions/cat.js';
+import { FETCH_CAT_SUCCESS, FETCH_CAT_REQUEST, FETCH_CAT_ERROR } from '../actions/cat.js';
 //dummy initialState
 const initialState = {
-  currentCat:{
-    imageURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC_1cvH240d8UYYYJgY8d-Eh9BJZkr_EyqDAlkfjU05eikqXxdWg',
-    imageDescription: 'White and Brown cat frowning',
-    name: 'Smiles',
-    sex: 'Male',
-    age: 4,
-    breed: 'Common Shorthair',
-    story: 'Too awesome for last owner'
-  },
-  loading:false,
-  error:null,
+  currentCat: null,
+  loading: false,
+  error: null,
 }
-  //
-  // const initialState = {
-  //   currentCat:null,
-  //   loading:false,
-  //   error:null,
-  // }
 
-export default function catReducer(state = initialState, action){
+export default function catReducer(state = initialState, action) {
   switch (action.type) {
     case FETCH_CAT_SUCCESS:
-      return null;
+      return {
+        ...state,
+        currentCat: action.cat,
+        loading: false,
+        error: false
+      };
+
+    case FETCH_CAT_ERROR:
+      return {
+        ...state,
+        loading: false,
+        error: action.error
+      };
+
+    case FETCH_CAT_REQUEST:
+      return {
+        ...state,
+        loading: true,
+        error: false
+      };
 
     default:
       return state;
