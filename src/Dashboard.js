@@ -16,7 +16,7 @@ class Dashboard extends Component {
   render() {
     return (
       <div className='pet-page'>
-        <Pet catToAdopt={this.props.catToAdopt} />
+        {/* <Pet catToAdopt={this.props.catToAdopt} /> */}
         <Pet dogToAdopt={this.props.dogToAdopt} />
       </div>
     );
@@ -24,7 +24,7 @@ class Dashboard extends Component {
 }
 
 export const mapStateToProps = (state, props) => ({
-  catToAdopt: state.cat,
+  // catToAdopt: state.cat,
   dogToAdopt: state.dog
 })
 
