@@ -10,7 +10,7 @@ Petful allows users to adopt the dog or cat that has been in the shelter the lon
 
 ## Tech Stack
 * React
-* Reduc
+* Redux
 * Redux-Thunk
 
 ## File Structure
