@@ -28,7 +28,7 @@ export default function Pet(props) {
           <dt>Story</dt>
         <dd>{props.animal.story}</dd>
         </dl>
-        <button onClick={e => onAdoptPet()}>Adopt!</button>
+        <button onClick={()=> props.handleAdopt()}>Adopt!</button>
       </main>
     </div>
 
