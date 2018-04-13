@@ -1,5 +1,8 @@
-import {createStore} from 'redux'
-import {hotAndColdReducer} from './reducers'
+import {createStore} from 'redux';
+import reducer from './reducers/index'
+const store = createStore(
+  reducer,
+);
 
-
-export default createStore(hotAndColdReducer);
+export default store;
+// combineReducers
